@@ -1,21 +1,22 @@
 // eslint-disable-next-line no-unused-vars
 const caesar = (string, shift) => {
-  const codeSet = code => (code < 97 ? 65 : 97);
-  const mod = (n, m) => ((n % m) + m) % m;
+  let result = '';
 
-  const shiftChar = (char, shift) => {
-    const code = char.charCodeAt();
-    if ((code >= 65 && code <= 90) || (code >= 97 <= 122)) {
-      return String.fromCharCode(mod(code + shift - codeSet(code), 26) + codeSet(code));
+  for (let i = 0; i < string.length; i += 1) {
+    const char = string.charCodeAt(i);
+
+    const mod = (num) => ((char - num + shift) % 26) + num;
+
+    if (char >= 65 && char <= 90) {
+      result += String.fromCharCode(mod(65));
+    } else if (char >= 97 && char <= 122) {
+      result += String.fromCharCode(mod(97));
+    } else {
+      result += string.charAt(i);
     }
+  }
 
-    return char;
-  };
-
-  return string
-    .split('')
-    .map(char => shiftChar(char, shift))
-    .join('');
+  return result;
 };
 
 export default caesar;
