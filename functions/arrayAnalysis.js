@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 function arrayAnalysis(array) {
   const { length } = array;
   let average = 0;
@@ -6,13 +5,9 @@ function arrayAnalysis(array) {
   let maxNum = 0;
   let sum = 0;
   if (length !== 0) {
-    minNum = array[0];
-    maxNum = array[0];
-    for (let i = 0; i < length; i += 1) {
-      if (minNum > array[i]) minNum = array[i];
-      if (maxNum < array[i]) maxNum = array[i];
-      sum += array[i];
-    }
+    sum = array.reduce((a, b) => a + b);
+    minNum = Math.min(...array);
+    maxNum = Math.max(...array);
     average = sum / length;
   }
   return {
@@ -22,5 +17,4 @@ function arrayAnalysis(array) {
     length,
   };
 }
-
 export default arrayAnalysis;
