@@ -1,0 +1,28 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "A testing practice using jest\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "functions/calculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luzaks/testing-practice.git"
+  },
+  "keywords": [
+    "testing",
+    "jest",
+    "babel"
+  ],
+  "author": "Guadalupe Rangel <kanemekanik@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luzaks/testing-practice/issues"
+  },
+  "homepage": "https://github.com/Luzaks/testing-practice#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.1",
+    "jest": "^26.0.1"
+  }
+}
